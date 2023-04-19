@@ -27,15 +27,16 @@ body {
 /* -------компоненти-------- */
 
 .container {
-  padding-left:  15px;
+  position: relative;
+  padding-left: 15px;
   padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media screen and (min-width: 428px) {
   .container {
     width: 426px;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 
@@ -50,14 +51,6 @@ body {
     width: 1158px;
   }
 }
-
-/* .container {
-  width: 1158px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
-} */
 
 .list-title {
   margin-bottom: 8px;
@@ -121,7 +114,7 @@ img {
 /* -------/компоненти-------- */
 /* -------шапка------- */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .menu {
     display: none;
   }
@@ -145,6 +138,7 @@ img {
     position: relative;
     width: 100%;
     height: 100%;
+    /* max-height: 796px; */
     padding: 40px 35px 40px 40px;
     display: flex;
     flex-direction: column;
@@ -184,7 +178,8 @@ img {
     border: 0.1em solid #d5d6e3;
     cursor: pointer;
 
-    transition: background-color var(--transition-duration-funktion), border var(--transition-duration-funktion);
+    transition: background-color var(--transition-duration-funktion),
+      border var(--transition-duration-funktion);
   }
 
   .mobile-menu-close-icon {
@@ -221,17 +216,17 @@ img {
     color: var(--nav-color);
   }
 
-  
   .mobile-contacts-list {
     font-style: normal;
     max-width: 353px;
   }
 
-  
   .mobile-contacts-phone {
     display: block;
     font-weight: 700;
-    font-size: calc(min(36px, 25px + (36 - 25) * ((100vw - 320px) / (428 - 320))));  
+    font-size: calc(
+      min(36px, 25px + (36 - 25) * ((100vw - 320px) / (428 - 320)))
+    );
     line-height: 1.11;
     letter-spacing: 0.02em;
     color: var(--primary-text-color);
@@ -254,7 +249,6 @@ img {
     max-width: 328px;
     align-content: center;
     justify-content: space-between;
-    
   }
   .link:hover,
   .link:focus {
@@ -357,7 +351,6 @@ img {
     display: flex;
     flex-direction: column;
     gap: 12px;
- 
   }
 
   .contacts-item {
@@ -366,10 +359,7 @@ img {
     line-height: 1.17;
     letter-spacing: 0.04em;
   }
-
- 
 }
-
 
 /* =====ШАПКА + ДЕСКТОП======= */
 @media screen and (min-width: 1158px) {
@@ -387,7 +377,6 @@ img {
     gap: 40px;
   }
 
- 
   .contacts-item {
     font-size: 16px;
     line-height: 1.5;
@@ -397,104 +386,131 @@ img {
   }
 }
 
-/* .page-header {
-  border-bottom: 1px solid var(--text-thema-dark-color);
-  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
-}
-.header-content {
-  display: flex;
-  align-items: center;
-}
-nav {
-  display: flex;
-  align-items: center;
-}
-.menu {
-  display: flex;
-  margin-left: 76px;
-}
-
-.menu-item {
-}
-
-.menu-item-link {
-}
-.menu-item:not(:last-child) {
-  margin-right: 40px;
-}
-.menu-after {
-  position: relative;
-}
-.menu-after::after {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  display: block;
-  width: 100%;
-  height: 4px;
-  background-color: var(--nav-accent-color);
-  border-radius: 2px;
-}
-
-.logo {
-  color: var(--accent-color);
-  font-family: "Raleway", sans-serif;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 1.17;
-
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  border: none;
-}
-.logo-thema-light {
-  color: var(--nav-color);
-}
-.menu-item-link {
-  display: block;
-  padding-top: 24px;
-  padding-bottom: 24px;
-
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--nav-color);
-}
-
-.link:hover,
-.link:focus {
-  color: var(--nav-accent-color);
-}
-
-.contacts-box {
-  font-style: normal;
-  margin-left: auto;
-}
-.contacts-list {
-  display: flex;
-}
-.contacts-list-item:nth-child(1) {
-  margin-right: 40px;
-}
-.contacts-item {
-  display: block;
-  padding-top: 24px;
-  padding-bottom: 24px;
-
-  color: var(--primary-text-color);
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-} */
-
 /* -------/шапка------- */
-/*-------- банер -------*/
 
-.hero-section {
+
+/*-------- банер -------*/
+/* =====БАНЕР МОБІЛКА ===== */
+
+  .hero-section {
+    text-align: center;
+    background-color: #2e2f42;
+    padding-top: 112px;
+    padding-bottom: 112px;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office-mob.jpg);
+    background-size: cover;
+    max-width: 768px;
+    margin: 0 auto;
+
+   
+  }
+  
+  @media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+    screen and (min-resolution: 192dpi) and (max-width: 767px), screen and (min-resolution: 2dppx) and (max-width: 767px) {
+      .hero-section {
+        background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office-mob@2x.jpg);
+      }
+
+    }
+
+  .main-title {
+    margin-bottom: 72px;
+    max-width: 320px;
+
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+
+    color: var(--just-white);
+  }
+
+  .modal-btn {
+    display: inline-block;
+    padding: 16px 32px 16px 32px;
+
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: var(--just-white);
+    background-color: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: background-color var(--transition-duration-funktion);
+  }
+
+  .modal-btn:hover,
+  .modal-btn:focus {
+    background-color: var(--nav-accent-color);
+  }
+
+  @media screen and (min-width: 768px ){
+    .hero-section {
+     
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/people-office-tab.jpg);
+     
+      max-width: 1158px;
+    }
+
+    .main-title {
+      margin-bottom: 36px;
+      max-width: 496px;
+      font-size: 56px;
+      line-height: 1.07;
+      letter-spacing: 0.02em;
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
+  .hero-section {
+    background-image: linear-gradient(
+    rgba(46, 47, 66, 0.7),
+    rgba(46, 47, 66, 0.7)
+  ),
+  url(../images/people-office-tab@2x.jpg);
+  }
+
+}
+
+@media screen and (min-width: 1158px) {
+  .hero-section {
+    padding-top: 188px;
+    padding-bottom: 188px;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office.jpg);
+   
+    max-width: 1440px;
+  }
+
+  .main-title {
+    margin-bottom: 48px;
+
+}
+
+
+/* .hero-section {
   text-align: center;
   background-color: #2e2f42;
   padding-top: 188px;
@@ -543,7 +559,7 @@ nav {
 .modal-btn:hover,
 .modal-btn:focus {
   background-color: var(--nav-accent-color);
-}
+} */
 /*-------- /банер -------*/
 
 /* ----переваги компанії---- */
