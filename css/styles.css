@@ -1010,9 +1010,11 @@ margin-left: 0;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  
-}
 
+}
+.portfolio-item:not(:last-child) {
+  margin-bottom: 48px;
+}
 .portfolio-link {
   display: block;
   transition: box-shadow var(--transition-duration-funktion);
