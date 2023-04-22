@@ -894,6 +894,7 @@ margin-left: 0;
   color: #ffffff;
   padding-left: 16px;
   margin-bottom: 16px;
+  background-color: transparent;
 }
 
 .footer-button {
@@ -956,10 +957,7 @@ margin-left: 0;
   display: flex;
   gap: 24px;
 }
-.footer-input {
-  width: 264px; 
-  background-color: transparent;
-}
+
 
 }
 
